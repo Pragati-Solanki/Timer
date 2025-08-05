@@ -16,10 +16,10 @@
 
 
  h1 {
-	color: green;
+	color: purple;
 	font-family: 'Share Tech Mono', 'Cascadia Code', Menlo, Monaco, 'Courier New', monospace;
 	font-size: 6rem;
-	filter: drop-shadow(0px 0px 5px currentColor);
+	filter: drop-shadow(0px 0px 5px purple);
 
 }
 
@@ -75,8 +75,8 @@
 			}
 
 			&::before {
-				background-image: repeating-linear-gradient(to left, green, green 4px, transparent 4px, transparent var(--grid)), 
-					repeating-linear-gradient(to bottom, green, green 4px, transparent 4px, transparent var(--grid));
+				background-image: repeating-linear-gradient(to left, purple, purple 4px, transparent 4px, transparent var(--grid)), 
+					repeating-linear-gradient(to bottom, purple, purple 4px, transparent 4px, transparent var(--grid));
 				animation: move 1s linear infinite forwards;
 			}
 
@@ -117,7 +117,7 @@
 	51% {
 		visibility: hidden;
 	}
-	
+
 	100% {
 		visibility: hidden;
 	}
@@ -137,17 +137,22 @@
 </div> 
 <center>
     <h1>TIMER
-    <div class="timeBox"><font color="#eee">12:00</font>
+        <div class="main">
+        <div class="timer-circle" id="timer">
+		<font color="#eee">	15:00 </font>
+        </div>
+        <div class="control-buttons">
+            <button onclick="togglePauseResume()">
+                  Pause
+              </button>
+            <button onclick="restartTimer()">
+                  Restart
+              </button>
+            <button onclick="chooseTime()">
+                  Choose Time
+              </button>
+        </div>
     </div>
-    <button class="button start">
-      Start
-    </button>
-    <button class="button pause">
-      Pause
-    </button>
-    <button class="button stop">
-      Stop
-    </button>
     </h1>
 </center>
   </body>
